@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <title>Tripify</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
 
-   <header class="navbar">
-    <div class="logo">Tripify</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="destination.html">Destinations</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="offers.html">Special Offers</a></li>
-        <li><a href="guide.html">Guide</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+  <a class="navbar-brand text-warning fw-bold" href="#">Tripify</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="destination.html">Destinations</a></li>
+      <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+      <li class="nav-item"><a class="nav-link" href="offers.html">Special Offers</a></li>
+      <li class="nav-item"><a class="nav-link" href="guide.html">Guide</a></li>
+      <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+      <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+      <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
     </ul>
-</header>
+  </div>
+</nav>
+
 
 <div class="grid-layout">
     <aside class="sidebar">
@@ -74,23 +83,29 @@
         <p>We are a passionate travel agency helping people discover the beauty of the world. From beaches to mountains, we make your journey unforgettable.</p>
     </section>
 
-    <section class="content-box">
-        <h2>Our Services</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>🌍 Tour Packages</h3>
-                <p>Choose from a variety of destinations and budget-friendly options.</p>
-            </div>
-            <div class="card">
-                <h3>📖 Booking</h3>
-                <p>Smart, simple, and secure reservations for your journey.</p>
-            </div>
-            <div class="card">
-                <h3>🔥 Special Offers</h3>
-                <p>Catch the hottest deals, discounts, and last-minute tours just for you.</p>
-            </div>
-        </div>
-    </section>
+    <section class="container my-5">
+  <h2 class="text-center mb-4">Our Services</h2>
+  <div class="row text-center">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100 p-3">
+        <h3>🌍 Tour Packages</h3>
+        <p>Choose from a variety of destinations and budget-friendly options.</p>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100 p-3">
+        <h3>📖 Booking</h3>
+        <p>Smart, simple, and secure reservations for your journey.</p>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-12 mb-4">
+      <div class="card h-100 p-3">
+        <h3>🔥 Special Offers</h3>
+        <p>Catch the hottest deals, discounts, and last-minute tours just for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
      <footer class="footer">
         <div class="footer-content">
@@ -107,8 +122,7 @@
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
-
-
