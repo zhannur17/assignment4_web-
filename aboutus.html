@@ -5,117 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - Tripify Travel Guide</title>
 
-  <!-- ✅ Bootstrap CSS -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* ✅ Responsive Typography (Task 1) */
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.6rem; }
-    p { font-size: 1rem; }
+    body {
+      background-color: #ffffff;
+    }
+
+    h1, h2 {
+      color: #007bff;
+    }
+
+    /* Sidebar style */
+    .sidebar {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      height: fit-content;
+    }
+
+    .sidebar h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    /* Team cards */
+    .card img {
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
     @media (max-width: 768px) {
       h1 { font-size: 1.8rem; }
-      h2 { font-size: 1.3rem; }
-      p { font-size: 0.95rem; }
+      h2 { font-size: 1.4rem; }
     }
 
     @media (max-width: 576px) {
       h1 { font-size: 1.5rem; }
-      h2 { font-size: 1.1rem; }
-      p { font-size: 0.9rem; }
+      h2 { font-size: 1.2rem; }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- ✅ Bootstrap Navbar (Task 5) -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">Tripify</a>
+      <a class="navbar-brand fw-bold text-warning" href="#">Tripify</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="destination.html">Destinations</a></li>
           <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="offers.html">Special Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="guide.html">Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+          <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
           <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ✅ Bootstrap Container + Grid Layout (Task 3) -->
+  <!-- Main Layout -->
   <div class="container my-5">
-
-    <!-- Sidebar + Content Grid -->
     <div class="row">
       <!-- Sidebar -->
-      <aside class="col-lg-3 col-md-4 mb-4">
-        <div class="card shadow-sm p-3">
-          <h3 class="h5 text-primary">Sidebar</h3>
-          <ul class="list-unstyled">
-            <li>About Us</li>
-            <li>Our Mission</li>
-            <li>Our Team</li>
-          </ul>
-        </div>
+      <aside class="col-lg-3 col-md-4 mb-4 sidebar">
+        <h3>About This Page</h3>
+        <ul class="list-unstyled">
+          <li>About Us</li>
+          <li>Our Mission</li>
+          <li>Our Team</li>
+        </ul>
       </aside>
 
-      <!-- Main Content -->
+      <!-- Content -->
       <main class="col-lg-9 col-md-8">
-        <section class="content-box">
-          <h1 class="mb-3 text-center text-primary">About Us</h1>
-          <p class="text-muted">Welcome to <strong>Tripify Travel Agency</strong>! We are passionate about helping you explore the world with ease and confidence.</p>
+        <section class="p-4 bg-white rounded shadow-sm">
+          <h1 class="mb-3 text-center">About Us</h1>
+          <p class="text-muted text-center">Welcome to <strong>Tripify Travel Agency!</strong> We are passionate about helping you explore the world with ease and confidence.</p>
 
-          <h2 class="mt-4 text-primary">Our Mission</h2>
+          <h2 class="mt-4 mb-3">Our Mission</h2>
           <p>To provide personalized travel experiences that create lasting memories and inspire adventure.</p>
 
-          <!-- ✅ Bootstrap Cards (Task 8) -->
-          <h2 class="mt-5 mb-4 text-primary text-center">Our Team</h2>
+          <h2 class="mt-5 mb-4 text-center">Our Team</h2>
           <div class="row g-4">
-            <div class="col-lg-3 col-md-6">
-              <div class="card h-100 text-center shadow-sm">
-                <img src="images/ayazhan.png.png" class="card-img-top" alt="Ayazhan">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card text-center">
+                <img src="images/ayazhan.png.png" alt="Ayazhan">
                 <div class="card-body">
                   <h5 class="card-title">Ayazhan Orynbasar</h5>
-                  <p class="card-text">CEO & Co-Founder</p>
+                  <p class="card-text text-muted">CEO & Co-Founder</p>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6">
-              <div class="card h-100 text-center shadow-sm">
-                <img src="images/zhannur.png.png" class="card-img-top" alt="Zhannur">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card text-center">
+                <img src="images/zhannur.png.png" alt="Zhannur">
                 <div class="card-body">
                   <h5 class="card-title">Zhannur Meirambek</h5>
-                  <p class="card-text">CEO</p>
+                  <p class="card-text text-muted">CEO</p>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6">
-              <div class="card h-100 text-center shadow-sm">
-                <img src="images/gulnaz.png.png" class="card-img-top" alt="Gulnaz">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card text-center">
+                <img src="images/gulnaz.png.png" alt="Gulnaz">
                 <div class="card-body">
                   <h5 class="card-title">Gulnaz Nurseit</h5>
-                  <p class="card-text">Customer Support</p>
+                  <p class="card-text text-muted">Customer Support</p>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6">
-              <div class="card h-100 text-center shadow-sm">
-                <img src="images/symbat.png.png" class="card-img-top" alt="Symbat">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card text-center">
+                <img src="images/symbat.png.png" alt="Symbat">
                 <div class="card-body">
                   <h5 class="card-title">Symbat Zhuman</h5>
-                  <p class="card-text">Travel Guide</p>
+                  <p class="card-text text-muted">Travel Guide</p>
                 </div>
               </div>
             </div>
@@ -125,20 +153,15 @@
     </div>
   </div>
 
-  <!-- ✅ Footer -->
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-4 mt-5">
     <div class="container">
       <p>&copy; 2025 Tripify Travel Agency | All Rights Reserved</p>
       <p>Team Members: Zhannur Meirambek, Symbat Zhuman, Ayazhan Orynbasar, Gulnaz Nurseit</p>
-      <div>
-        <a href="#" class="text-white mx-2">🌐</a>
-        <a href="#" class="text-white mx-2">📷</a>
-        <a href="#" class="text-white mx-2">✉️</a>
-      </div>
     </div>
   </footer>
 
-  <!-- ✅ Bootstrap JS -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
